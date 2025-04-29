@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savannah Greens | Premium Golf Products & Services - Nairobi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'golf-green': '#1a5632',
+                        'savannah-gold': '#d4a017',
+                        'nairobi-blue': '#0077b6',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-pattern {
+            background-image: url('https://images.unsplash.com/photo-1535131749006-b7f58c99034f?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .product-overlay {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #d4a017;
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .kenya-flag {
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .kenya-flag::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 15px;
+            background: linear-gradient(to bottom, 
+                black 0%, black 33.33%,
+                red 33.33%, red 66.66%,
+                green 66.66%, green 100%);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-golf-green flex items-center">
+                        <i class="fas fa-golf-ball mr-2 text-savannah-gold"></i>
+                        <span>Savannah<span class="text-savannah-gold">Greens</span></span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-golf-green font-medium">Home</a>
+                    <a href="#products" class="nav-link text-gray-700 hover:text-golf-green font-medium">Products</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-golf-green font-medium">Services</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-golf-green font-medium">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-golf-green font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-700", fill="none" stroke-linecap="round", stroke-linejoin="round", stroke-width="2", viewBox="0 0 24 24", stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden mobile-menu">
+            <div class="container mx-auto px-6 py-3 bg-white">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-golf-green">Home</a>
+                <a href="#products" class="block py-2 text-gray-700 hover:text-golf-green">Products</a>
+                <a href="#services", class="block py-2 text-gray-700 hover:text-golf-green">Services</a>
+                <a href="#about", class="block py-2 text-gray-700 hover:text-golf-green">About</a>
+                <a href="#contact", class="block py-2 text-gray-700 hover:text-golf-green">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern bg-golf-green bg-opacity-90 text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Premium Golf Experiences <span class="text-savannah-gold">in Nairobi</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Elevate your game with our premium golf equipment, apparel, and professional services tailored for the Kenyan golf enthusiast.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#products" class="bg-savannah-gold hover:bg-yellow-600 text-golf-green font-bold py-3 px-8 rounded-full transition duration-300">Explore Products</a>
+                <a href="#services" class="bg-transparent hover:bg-white hover:text-golf-green border-2 border-white text-white font-bold py-3 px-8 rounded-full transition duration-300">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-golf-green mb-4">Our Premium Products</h2>
+                <div class="w-20 h-1 bg-savannah-gold mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Discover our carefully curated selection of golf equipment and accessories from the world's leading brands.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden relative group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1592921870789-045959971b0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Golf Clubs" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-golf-green mb-2">Premium Golf Clubs</h3>
+                        <p class="text-gray-600 mb-4">Engineered for precision and performance to elevate your game.</p>
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                            <a href="#" class="bg-savannah-gold hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden relative group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" alt="Golf Apparel" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-golf-green mb-2">Performance Apparel</h3>
+                        <p class="text-gray-600 mb-4">Designed for comfort and style on the course in Nairobi's climate.</p>
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                            <a href="#" class="bg-savannah-gold hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden relative group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Golf Accessories" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-golf-green mb-2">Essential Accessories</h3>
+                        <p class="text-gray-600 mb-4">Complete your golfing experience with our premium accessories.</p>
+                        <div class="product-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                            <a href="#" class="bg-savannah-gold hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-golf-green hover:text-savannah-gold font-bold">
+                    View All Products
+                    <svg class="w-4 h-4 ml-2", fill="none", stroke="currentColor", viewBox="0 0 24 24", xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-golf-green mb-4">Our Professional Services</h2>
+                <div class="w-20 h-1 bg-savannah-gold mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Enhance your golfing experience with our range of professional services tailored for players of all levels.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-golf-green rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-golf-club text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-golf-green mb-3">Custom Club Fitting</h3>
+                    <p class="text-gray-600">Optimize your equipment with our state-of-the-art fitting technology for perfect club specifications.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-golf-green rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-golf-green mb-3">Professional Coaching</h3>
+                    <p class="text-gray-600">Personalized training programs with PGA-certified instructors to improve every aspect of your game.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-golf-green rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tools text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-golf-green mb-3">Club Repair & Maintenance</h3>
+                    <p class="text-gray-600">Expert club repair services to keep your equipment in top condition for optimal performance.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-golf-green rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-calendar-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-golf-green mb-3">Event Hosting</h3>
+                    <p class="text-gray-600">Complete event management services for corporate golf days, tournaments, and special occasions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                    <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Golf Course in Nairobi" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-golf-green mb-6">About Savannah Greens</h2>
+                    <div class="w-20 h-1 bg-savannah-gold mb-6"></div>
+                    <p class="text-gray-600 mb-4">Founded in the heart of Nairobi, Savannah Greens is dedicated to bringing world-class golf products and services to Kenya's growing community of golf enthusiasts.</p>
+                    <p class="text-gray-600 mb-6">Our team of passionate golf professionals combines international expertise with local knowledge to provide tailored solutions that meet the unique needs of golfers in our region.</p>
+                    
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-map-marker-alt text-savannah-gold mr-3"></i>
+                        <span class="kenya-flag text-gray-700">Nairobi, Kenya</span>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-certificate text-savannah-gold mr-3"></i>
+                        <span class="text-gray-700">PGA Certified Professionals</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-star text-savannah-gold mr-3"></i>
+                        <span class="text-gray-700">Premium Products & Services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-golf-green mb-4">What Our Clients Say</h2>
+                <div class="w-20 h-1 bg-savannah-gold mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                        </div>
+                        <div class="ml-4">
+                            <div class="text-sm font-medium text-golf-green">James M.</div>
+                            <div class="text-sm text-gray-500">Corporate Member</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The custom fitting service transformed my game. My clubs now feel like they were made just for me. The attention to detail is unmatched in Nairobi."</p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                        </div>
+                        <div class="ml-4">
+                            <div class="text-sm font-medium text-golf-green">Sarah K.</div>
+                            <div class="text-sm text-gray-500">Junior Program</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"My son's golf has improved dramatically since starting lessons with Savannah Greens. The coaches are patient, knowledgeable, and make learning fun."</p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client">
+                        </div>
+                        <div class="ml-4">
+                            <div class="text-sm font-medium text-golf-green">David W.</div>
+                            <div class="text-sm text-gray-500">Tournament Player</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The quality of their golf apparel is exceptional - perfect for Nairobi's climate. I always get compliments on the course about how comfortable and stylish it looks."</p>
+                    <div class="mt-4 flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-golf-green mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-savannah-gold mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Get in touch with our team for inquiries about products, services, or to schedule an appointment.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold text-golf-green mb-6">Our Information</h3>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-savannah-gold text-xl mt-1"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-800">Location</h4>
+                                <p class="text-gray-600">Golf Park Plaza, Muthaiga Road<br>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-phone-alt text-savannah-gold text-xl mt-1"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-800">Phone</h4>
+                                <p class="text-gray-600">+254 759 457 744</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-envelope text-savannah-gold text-xl mt-1"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-800">Email</h4>
+                                <p class="text-gray-600">iandy6010@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock text-savannah-gold text-xl mt-1"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-gray-800">Hours</h4>
+                                <p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-golf-green mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-savannah-gold focus:border-transparent" placeholder="Your Name">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-savannah-gold focus:border-transparent" placeholder="Your Email">
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-savannah-gold focus:border-transparent">
+                                    <option value="">Select a subject</option>
+                                    <option value="products">Product Inquiry</option>
+                                    <option value="fitting">Custom Fitting</option>
+                                    <option value="lessons">Golf Lessons</option>
+                                    <option value="events">Event Hosting</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-savannah-gold focus:border-transparent" placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-golf-green hover:bg-green-800 text-white font-bold py-3 px-4 rounded-full transition duration-300">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-golf-green text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Stay Updated with Savannah Greens</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">Subscribe to our newsletter for the latest product arrivals, exclusive offers, and golf tips.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="px-4 py-3 rounded-l-full sm:rounded-r-none rounded-r-full mb-2 sm:mb-0 w-full text-gray-800 focus:outline-none">
+                <button class="bg-savannah-gold hover:bg-yellow-600 text-golf-green font-bold px-6 py-3 rounded-r-full sm:rounded-l-none rounded-l-full transition duration-300">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-golf-ball mr-2 text-savannah-gold"></i>
+                        <span>Savannah<span class="text-savannah-gold">Greens</span></span>
+                    </h3>
+                    <p class="text-gray-400">Your premier destination for golf products and services in Nairobi, Kenya.</p>
+                    <div class="flex mt-4 space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-savannah-gold transition duration-300">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-savannah-gold transition duration-300">Products</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-savannah-gold transition duration-300">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-savannah-gold transition duration-300">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-savannah-gold transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Golf Clubs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Golf Balls</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Apparel</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Footwear</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Custom Fitting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Golf Lessons</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Club Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Event Hosting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Corporate Packages</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">&copy; 2023 Savannah Greens. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-savannah-gold transition duration-300">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-golf-green text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.hero-pattern {
+    background-image: url('https://images.unsplash.com/photo-1535131749006-b7f58c99034f?ixlib=rb-4.0.3');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+                0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-overlay {
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #d4a017;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.kenya-flag {
+    position: relative;
+    padding-left: 25px;
+}
+
+.kenya-flag::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 15px;
+    background: linear-gradient(to bottom,
+        black 0%, black 33.33%,
+        red 33.33%, red 66.66%,
+        green 66.66%, green 100%);
+    border-radius: 2px;
+}
