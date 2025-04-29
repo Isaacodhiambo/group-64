@@ -1,12 +1,11 @@
-# 🧠 GoF and Accessories Website – Group 64
+# Golf and Accessories Website – Group 64
 
-Welcome to the Group 64 project repository! This web project presents a sleek and informative website focused on the **GoF (Gang of Four) design patterns** along with related **accessory content**, built using **HTML** and **CSS**.
+Welcome to the Group 64 project repository! This web project presents a stylish and responsive website for showcasing **golf accessories**, built with **HTML** and **CSS**.
 
-## 🌐 Project Description
+##  Project Description
+This website serves as an informational and promotional platform for golf enthusiasts. It features a clean layout, modern visuals, and intuitive navigation to highlight various **golf accessories**, such as clubs, bags, gloves, and more.
 
-The website serves as an educational and reference platform for software developers and design enthusiasts. It provides an overview of the **GoF design patterns** — a foundational part of object-oriented software design — in a clean, structured, and visually appealing format.
-
-## 📁 Project Structure
+##  Project Structure
 group-64/
 └── OneDrive/
     └── Documents/
